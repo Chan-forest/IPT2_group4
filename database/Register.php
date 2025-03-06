@@ -1,6 +1,6 @@
 <?php
 $server_name = "localhost";
-$db_name = "login_register";
+$db_name = "ipt2_midterm_project";
 $db_username = "root";
 $db_password = "";
 
