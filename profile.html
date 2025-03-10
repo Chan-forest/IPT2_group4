@@ -3,6 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>PROFILE</title>
+	<style>
+            /* Styling for unordered and ordered lists to remove default styles */
+            ul, ol {
+                list-style-type: none; /* Removes bullet points and numbers */
+                padding: 0;
+            }
+
+            ul li::before {
+                content: "• "; /* Adds a bullet point manually for unordered lists */
+                color: #000; /* Set bullet color */
+            }
+        </style>
     </head>
     <body>
         <center>
