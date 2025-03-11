@@ -106,7 +106,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form class="login" novalidate method="POST" action="login.php">
             <div class="col-12">
                 <div class="input-group has-validation">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required>
+                <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Enter your username" required>
+
                     <div class="invalid-feedback">Please enter your username.</div>
                 </div>
             </div>
@@ -140,20 +141,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div style="color: red;"><?php echo $error; ?></div>
 <?php endif; ?>
 
-<script>
-function togglePassword() {
-    const passwordField = document.getElementById("password");
-    const toggleIcon = event.target;
+<div id="spinner" style="display:none;">
+    <img src="assets/img/spinner.gif" alt="Loading...">
+</div>
 
-    if (passwordField.type === "password") {
-        passwordField.type = "text"; // Show password
-        toggleIcon.textContent = "👁️"; // Replace eye icon with "hide" icon
-    } else {
-        passwordField.type = "password"; // Hide password
-        toggleIcon.textContent = "🙈"; // Replace back with "show" icon
-    }
-}
-</script>
               <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
@@ -185,6 +176,7 @@ function togglePassword() {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/login_reg.js"></script>
 
 </body>
 

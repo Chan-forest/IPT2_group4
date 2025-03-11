@@ -135,22 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php if (!empty($error)): ?>
     <div style="color: red;"><?php echo $error; ?></div>
 <?php endif; ?>
-
-<script>
-function togglePassword() {
-    const passwordField = document.getElementById("password");
-    const toggleIcon = event.target;
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text"; // Show password
-        toggleIcon.textContent = "👁️"; // Replace eye icon with "hide" icon
-    } else {
-        passwordField.type = "password"; // Hide password
-        toggleIcon.textContent = "🙈"; // Replace back with "show" icon
-    }
-}
-</script>
-
               <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
@@ -182,6 +166,7 @@ function togglePassword() {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/login_reg.js"></script>
 
 </body>
 

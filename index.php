@@ -22,19 +22,12 @@ if (isset($_GET['search'])) {
     $sql = "SELECT * FROM students";
 }
 $result = $conn->query($sql);
-
 ?>
+
  <main id="main" class="main">
   
     <div class="pagetitle">
       <h1>Student Information Management System</h1>
-      <!-- <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active">General</li>
-        </ol>
-      </nav> -->
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -55,7 +48,7 @@ $result = $conn->query($sql);
 
               <!-- Default Table -->
  
-              <table class="table">
+              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -96,7 +89,7 @@ $result = $conn->query($sql);
                     data-year="<?= $row['year'] ?>"
                     data-block="<?= $row['block'] ?>"
                     data-status="<?= $row['status'] ?>">Edit</button>
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteStudentModal" data-id="<?= $row['id'] ?>">Delete</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteStudentModal" data-id="<?= $row['id'] ?>" aria-label="Delete Student">Delete</button>
           </td>
         </tr>
       <?php endwhile; ?>
@@ -110,27 +103,10 @@ $result = $conn->query($sql);
 
 
 
+
     </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="editInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInfoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="editInfoLabel">Employee Information</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main><!-- End #main -->
   <!-- Add Student Modal -->
 <div class="modal fade" id="addStudentModal"  tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">

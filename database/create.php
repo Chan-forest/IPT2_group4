@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['status'] = "error"; 
     }
 
+    
+
     mysqli_close($conn); 
     header("Location: ../index.php"); 
     exit(); 
