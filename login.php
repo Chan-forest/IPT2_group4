@@ -74,7 +74,7 @@ if (isset($_GET['message']) && $_GET['message'] == 'success') {
 
 
         <?php
-include 'database/Register.php';
+include 'database/database.php';
 session_start();
 
 $error = ""; // Initialize an error message variable
