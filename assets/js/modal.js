@@ -46,3 +46,16 @@ deleteStudentModal.addEventListener('show.bs.modal', function (event) {
     var id = button.getAttribute('data-id');
     document.getElementById('delete-id').value = id;
 });
+//only allow letters and spaces in text fields
+document.addEventListener("DOMContentLoaded", function () {
+  const textOnlyFields = ["firstname", "lastname", "course", "status","edit-firstname", "edit-lastname", "edit-course", "edit-status"];
+
+  textOnlyFields.forEach(function (fieldId) {
+    const inputField = document.getElementById(fieldId);
+    
+    inputField.addEventListener("input", function () {
+      // Remove any characters that are not letters or spaces
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+    });
+  });
+});
