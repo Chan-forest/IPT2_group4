@@ -3,11 +3,6 @@
   include('partials\sidebar.php');
   include('database\database.php');
   
-  //$sql = "SELECT * FROM students";
-  //$result = $conn->query($sql);
-  
-
-  // Your PHP BACK CODE HERE
   $search = "";
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
@@ -23,7 +18,6 @@ if (isset($_GET['search'])) {
 }
 $result = $conn->query($sql);
 ?>
-
  <main id="main" class="main">
   
     <div class="pagetitle">
@@ -100,13 +94,8 @@ $result = $conn->query($sql);
     <?php endif; ?>
   </tbody>
 </table>
-
-
-
-
-    </div>
-
-      <!-- Modal -->
+  </div>
+ <!-- Modal -->
   </main><!-- End #main -->
   <!-- Add Student Modal -->
 <div class="modal fade" id="addStudentModal"  tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
@@ -173,9 +162,6 @@ $result = $conn->query($sql);
     </div>
   </div>
 </div>
-
-
-
 <!-- Edit Student Modal -->
 <div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -222,8 +208,6 @@ $result = $conn->query($sql);
     </div>
   </div>
 </div>
-
-
 <!-- Delete Student Modal -->
 <div class="modal fade" id="deleteStudentModal" tabindex="-1" aria-labelledby="deleteStudentModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -245,16 +229,10 @@ $result = $conn->query($sql);
     </div>
   </div>
 </div>
-
-
-
 <!-- Include Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Include external JS file -->
 <script src="assets/js/modal.js"></script>
-
-
-
 <?php
 include('partials\footer.php');
 ?>
